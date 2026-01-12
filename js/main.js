@@ -222,12 +222,12 @@ function changePage(delta) {
 }
 
 // Initialize application logic when the DOM is fully loaded.
-document.addEventListener('DOMContentLoaded', () => {
+// Initialize application logic when the DOM is fully loaded.
+document.addEventListener('componentsLoaded', () => {
   initLanguageToggle();
-  // initSidebar(); // Removed sidebar logic in previous step, checking context... 
-  // Wait, I see initSidebar() is still there in the file view, just the HTML elements were removed in article.html.
-  // I should keep it for other pages if they use it, but user removed it from article.html.
-  // Actually, user said "remove the light mode", so I focus on that.
   initSidebar();
-  loadBlogPosts();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadBlogPosts();
 });
