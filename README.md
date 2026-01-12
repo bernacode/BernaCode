@@ -7,16 +7,6 @@
 <div align="center">
   <h3>🚀 Ingeniero & Desarrollador de Software | Engineer & Software Developer</h3>
   <p><em>"Siempre aprendiendo, siempre creando" | "Always learning, always creating"</em></p>
-  
-  <a href="https://linkedin.com/in/bernacode" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-  </a>
-  <a href="mailto:contact@bernacode.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
-  </a>
-  <a href="https://bernacode.com" target="_blank">
-    <img src="https://img.shields.io/badge/Portfolio-20c997?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio"/>
-  </a>
 </div>
 
 ---
@@ -41,7 +31,6 @@
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
-![REST APIs](https://img.shields.io/badge/REST%20APIs-005571?style=for-the-badge&logo=fastapi&logoColor=white)
 
 ### 📊 Data & Analysis
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
@@ -73,7 +62,6 @@
 **EN:** Administrative management platform for a family educational venture in Venezuela. Attendance and financial control.
 
 *   🛠 **Tech:** Python, Django, PostgreSQL
-*   🔗 [Ver Proyecto / View Project](https://github.com/bernacode)
 
 ### 🖥️ Prometheus-Control
 > **Infrastructure Monitoring Lab**
@@ -83,16 +71,6 @@
 **EN:** Personal lab built on Ubuntu Live Server. Monitoring and metrics environment for local infrastructure control.
 
 *   🛠 **Tech:** Ubuntu Server, Prometheus, Linux Dashboard
-*   🔗 [Ver Proyecto / View Project](https://github.com/bernacode)
-
----
-
-## 📈 GitHub Stats
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=bernacode&show_icons=true&theme=dark&hide_border=true&bg_color=00000000" alt="BernaCode Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=bernacode&layout=compact&theme=dark&hide_border=true&bg_color=00000000" alt="Top Langs" />
-</div>
 
 ---
 
