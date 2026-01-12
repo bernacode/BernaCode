@@ -1,7 +1,7 @@
 # <div align="center">Hola, soy Christian Deliso (BernaCode) 👨‍💻</div>
 
 <div align="center">
-  <img src="https://ui-avatars.com/api/?name=Berna+Code&size=200&background=20c997&color=ffffff&bold=true&rounded=true" alt="BernaCode Avatar" width="150"/>
+  <img src="https://avatars.githubusercontent.com/u/197780656?v=4" alt="BernaCode Avatar" width="150" style="border-radius: 50%;"/>
 </div>
 
 <div align="center">
@@ -62,15 +62,6 @@
 **EN:** Administrative management platform for a family educational venture in Venezuela. Attendance and financial control.
 
 *   🛠 **Tech:** Python, Django, PostgreSQL
-
-### 🖥️ Prometheus-Control
-> **Infrastructure Monitoring Lab**
-
-**ES:** Laboratorio personal montado sobre Ubuntu Live Server. Entorno de monitoreo y métricas para el control de infraestructura local.
-<br>
-**EN:** Personal lab built on Ubuntu Live Server. Monitoring and metrics environment for local infrastructure control.
-
-*   🛠 **Tech:** Ubuntu Server, Prometheus, Linux Dashboard
 
 ---
 
