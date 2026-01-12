@@ -1,0 +1,247 @@
+<!--
+  FILE: index.html
+  VERSION: 1.0.0
+  DESCRIPTION:
+    Landing page for BernaCode portfolio. Structure follows a semantic HTML5 layout
+    enhanced with Bootstrap 5 utilities and custom CSS.
+
+  STRUCTURE:
+    - <head>: Meta tags, CDNs (Bootstrap, FontAwesome, Google Fonts), and local CSS.
+    - <body>:
+      1. <nav>: Sticky navigation bar with language toggle logic.
+      2. <main>: Hero section containing profile image, bio, and social links.
+      3. <aside>: "Tech Blog" sidebar, hidden by default, toggled via JS.
+      4. <footer>: Copyright and simplified credits.
+      5. <script>: Bootstrap bundle and local main.js.
+
+  STYLE GUIDELINES (Google Style):
+    - Indentation: 2 spaces.
+    - Attributes: Ordered by namespace (id, class, name, data, src, href...).
+    - Lowercase tags and attributes.
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BernaCode | Christian Deliso</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg py-3 sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bolder text-uppercase" href="index.html">BernaCode.</a>
+
+      <div class="d-flex align-items-center gap-3 order-lg-3">
+
+        
+        <!-- LANG TOGGLE -->
+        <div id="lang-toggle" class="lang-switch">
+          <span data-lang-content="es">EN</span>
+          <span data-lang-content="en">ES</span>
+        </div>
+      </div>
+
+      <div id="navbarNav" class="collapse navbar-collapse justify-content-center">
+        <ul class="navbar-nav gap-4 text-uppercase small fw-bold">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="stack.html">Stack</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN HERO SECTION -->
+  <main class="flex-grow-1 d-flex align-items-center justify-content-center py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-8 text-center">
+          
+          <div class="mb-4 d-inline-block">
+            <img src="https://ui-avatars.com/api/?name=Berna+Code&size=300&background=20c997&color=ffffff&bold=true" 
+                 class="rounded-circle profile-pic shadow" 
+                 alt="Christian Deliso BernaCode">
+          </div>
+
+          <h1 class="display-5 fw-bold mb-1">Christian Deliso</h1>
+          <h2 class="h4 mb-0"><span class="highlight">"BernaCode"</span></h2>
+          
+          <p class="professional-title">
+            <span data-lang-content="es">Ingeniero & Desarrollador</span>
+            <span data-lang-content="en">Engineer & Developer</span>
+          </p>
+          
+          <div class="section-divider"></div>
+
+          <p class="lead fs-5 mb-4 mx-auto" style="max-width: 700px;">
+            <span data-lang-content="es">
+              <strong>Ingeniero y Desarrollador</strong> apasionado por la evolución técnica. Me especializo en adoptar y dominar nuevas herramientas para afrontar desafíos desde cualquier ángulo tecnológico. Bajo el lema <span class="highlight">"siempre aprendiendo, siempre creando"</span>.
+            </span>
+            <span data-lang-content="en">
+              <strong>Engineer & Developer</strong> passionate about technical evolution. I specialize in adopting and mastering new tools to tackle challenges from any technological angle. Driven by the motto <span class="highlight">"always learning, always creating"</span>.
+            </span>
+          </p>
+
+          <div class="working-at mb-5">
+            <span data-lang-content="es">
+              Actualmente, desarrollando una plataforma integral de gestión académica y financiera.
+            </span>
+            <span data-lang-content="en">
+              Currently, developing a comprehensive academic and financial management platform.
+            </span>
+          </div>
+
+          <div class="d-flex justify-content-center gap-3">
+            <a class="btn btn-contrast px-4 py-3" href="#">
+              <span data-lang-content="es">Ver Proyectos</span><span data-lang-content="en">View Projects</span>
+              <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+            <a class="btn btn-outline-contrast px-4 py-3" href="mailto:contact@bernacode.com">
+              <i class="fas fa-envelope me-2"></i>
+              <span data-lang-content="es">Contactar</span><span data-lang-content="en">Contact Me</span>
+            </a>
+          </div>
+
+          <div class="mt-5 d-flex justify-content-center gap-4">
+            <a class="text-inherit fs-4 hover-accent" href="https://github.com/bernacode"><i class="fab fa-github"></i></a>
+            <a class="text-inherit fs-4 hover-accent" href="https://linkedin.com/in/bernacode"><i class="fab fa-linkedin"></i></a>
+            <a class="text-inherit fs-4 hover-accent" href="https://twitter.com/bernacode"><i class="fab fa-twitter"></i></a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- TOGGLE BUTTON -->
+  <button id="blog-toggle-left" class="tech-toggle-left">
+    <i class="fas fa-arrow-right"></i>
+  </button>
+
+  <!-- ASIDE BLOG -->
+  <aside id="tech-blog-left">
+
+    <div class="tech-header d-flex flex-column gap-3">
+      <div class="d-flex justify-content-between align-items-center w-100">
+        <h4 class="text-uppercase fw-bold small mb-0"><span data-lang-content="es">Blog Tecnico</span><span data-lang-content="en">Tech Blog</span></h4>
+        <button id="blog-close-left" class="tech-close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      
+      <!-- Search & Filter Controls -->
+      <div class="w-100">
+        <div class="input-group mb-2">
+          <span class="input-group-text bg-transparent border-secondary text-muted"><i class="fas fa-search"></i></span>
+          <input type="text" id="tech-search" class="form-control bg-transparent border-secondary text-light small" placeholder="Search..." style="font-size: 0.9rem;">
+        </div>
+        <div id="tech-filter-tags" class="d-flex flex-wrap gap-2">
+          <!-- Tags will be injected here -->
+        </div>
+      </div>
+    </div>
+
+    <div class="tech-content d-flex flex-column h-100">
+      <div id="blog-posts-container" class="flex-grow-1">
+        <!-- Posts will be loaded here dynamically -->
+        <div class="text-center mt-4">
+          <div class="spinner-border spinner-border-sm text-muted" role="status"></div>
+        </div>
+      </div>
+      
+      <!-- Pagination -->
+      <div id="tech-pagination" class="mt-auto pt-3 border-top border-secondary d-flex justify-content-between align-items-center">
+        <!-- Pagination controls injected here -->
+      </div>
+    </div>
+  </aside>
+
+  <!-- EXPANDED FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row gy-5">
+        
+        <!-- Column 1: Brand & About -->
+        <div class="col-12 col-md-4">
+          <a class="navbar-brand fw-bolder text-uppercase d-block mb-3 text-reset" href="index.html">BernaCode.</a>
+          <p class="text-muted small">
+            <span data-lang-content="es">Ingeniero y Desarrollador enfocado en soluciones escalables. Transformando ideas complejas en código limpio y eficiente.</span>
+            <span data-lang-content="en">Engineer and Developer focused on scalable solutions. Transforming complex ideas into clean and efficient code.</span>
+          </p>
+          <div class="d-flex gap-3 mt-3">
+            <a href="https://github.com/bernacode" aria-label="Github"><i class="fab fa-github fs-5 hover-accent"></i></a>
+            <a href="https://linkedin.com/in/bernacode" aria-label="LinkedIn"><i class="fab fa-linkedin fs-5 hover-accent"></i></a>
+            <a href="https://twitter.com/bernacode" aria-label="Twitter"><i class="fab fa-twitter fs-5 hover-accent"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="col-6 col-md-2">
+          <h5><i class="fas fa-compass me-2"></i><span data-lang-content="es">Explorar</span><span data-lang-content="en">Explore</span></h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html"><span data-lang-content="es">Inicio</span><span data-lang-content="en">Home</span></a></li>
+            <li><a href="projects.html"><span data-lang-content="es">Proyectos</span><span data-lang-content="en">Projects</span></a></li>
+            <li><a href="stack.html">Stack</a></li>
+            <li><a href="about.html"><span data-lang-content="es">Sobre mí</span><span data-lang-content="en">About Me</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: SEO / Stack -->
+        <div class="col-12 col-md-3">
+          <h5><i class="fas fa-layer-group me-2"></i>Stack</h5>
+            <div class="footer-seo-tags">
+                <span>Python</span>
+                <span>Java</span>
+                <span>Django</span>
+                <span>PostgreSQL</span>
+                <span>NumPy & Pandas</span>
+                <span>Matplotlib & Seaborn</span>
+                <span>SciPy</span>
+                <span>Data Science</span>
+                <span>Docker</span>
+                <span>Git / GitHub</span>
+                <span>Linux / Shell</span>
+            </div>
+        </div>
+
+        <!-- Column 4: Contact -->
+        <div class="col-6 col-md-3">
+          <h5><i class="fas fa-envelope me-2"></i><span data-lang-content="es">Contacto</span><span data-lang-content="en">Contact</span></h5>
+          <ul class="list-unstyled">
+            <li><a href="mailto:contact@bernacode.com">contact@bernacode.com</a></li>
+            <li>Venezuela, Carabobo, Valencia</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom -->
+      <div class="footer-bottom text-center">
+        <p class="mb-0">
+          © 2026 BernaCode. 
+          <span data-lang-content="es">Siempre aprendiendo, siempre creando.</span>
+          <span data-lang-content="en">Always learning, always creating.</span>
+          <br class="d-md-none">
+          <span class="mx-2 d-none d-md-inline">|</span>
+          <a href="privacy.html" class="text-muted text-decoration-none small">
+            <span data-lang-content="es">Política de Privacidad</span>
+            <span data-lang-content="en">Privacy Policy</span>
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

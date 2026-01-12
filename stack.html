@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Tecnológico | BernaCode</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css"> 
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg py-3 sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bolder text-uppercase" href="index.html">BernaCode.</a>
+
+            <div class="d-flex align-items-center gap-3 order-lg-3">
+                <div class="lang-switch" id="lang-toggle">
+                    <span data-lang-content="es">EN</span>
+                    <span data-lang-content="en">ES</span>
+                </div>
+            </div>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav gap-4 text-uppercase small fw-bold">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="stack.html">Stack</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Sobre mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5 mt-4">
+        <header class="text-center mb-5">
+            <h1 class="display-4 fw-bold text-uppercase">
+                <span data-lang-content="es">Tecnologías</span>
+                <span data-lang-content="en">Tech Stack</span>
+            </h1>
+            <div class="section-divider mx-auto" style="max-width: 200px;"></div>
+            <p class="text-muted text-uppercase ls-2">
+                <span data-lang-content="es">Herramientas que domino y exploro continuamente</span>
+                <span data-lang-content="en">Tools I master and continuously explore</span>
+            </p>
+        </header>
+
+        <div class="row g-4 mt-2">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="stack-card">
+                    <h3 class="h5 fw-bold mb-4 highlight text-uppercase">Backend & Logic</h3>
+                    <ul class="stack-list">
+                        <li><i class="fab fa-python me-2"></i> Python</li>
+                        <li><i class="fas fa-server me-2"></i> Django Framework</li>
+                        <li><i class="fab fa-java me-2"></i> Java</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="stack-card">
+                    <h3 class="h5 fw-bold mb-4 highlight text-uppercase">Data & Analysis</h3>
+                    <ul class="stack-list">
+                        <li><i class="fas fa-database me-2"></i> PostgreSQL</li>
+                        <li><i class="fas fa-chart-line me-2"></i> NumPy & Pandas</li>
+                        <li><i class="fas fa-chart-pie me-2"></i> Matplotlib & Seaborn</li>
+                        <li><i class="fas fa-flask me-2"></i> SciPy</li>
+                        <li><i class="fas fa-microchip me-2"></i> Data Science (Student)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="stack-card">
+                    <h3 class="h5 fw-bold mb-4 highlight text-uppercase">Infra & Tools</h3>
+                    <ul class="stack-list">
+                        <li><i class="fab fa-docker me-2"></i> Docker</li>
+                        <li><i class="fab fa-git-alt me-2"></i> Git / GitHub</li>
+                        <li><i class="fas fa-terminal me-2"></i> Linux / Shell</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="stack-card border-dashed text-center">
+                    <h3 class="h5 fw-bold mb-3 text-muted text-uppercase">
+                        <span data-lang-content="es">Próxima Parada: Ciberseguridad</span>
+                        <span data-lang-content="en">Next Stop: Cybersecurity</span>
+                    </h3>
+                    <p class="small text-muted mb-0 mx-auto" style="max-width: 600px;">
+                        <span data-lang-content="es">Interesado en la protección de datos y robustez de sistemas. Explorando seguridad en redes y aplicaciones web.</span>
+                        <span data-lang-content="en">Interested in data protection and system robustness. Exploring network and web application security.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- EXPANDED FOOTER -->
+    <footer class="main-footer mt-auto">
+        <div class="container">
+          <div class="row gy-5">
+            
+            <!-- Column 1: Brand & About -->
+            <div class="col-12 col-md-4">
+              <a class="navbar-brand fw-bolder text-uppercase d-block mb-3 text-reset" href="index.html">BernaCode.</a>
+              <p class="text-muted small">
+                <span data-lang-content="es">Ingeniero y Desarrollador enfocado en soluciones escalables. Transformando ideas complejas en código limpio y eficiente.</span>
+                <span data-lang-content="en">Engineer and Developer focused on scalable solutions. Transforming complex ideas into clean and efficient code.</span>
+              </p>
+              <div class="d-flex gap-3 mt-3">
+                <a href="https://github.com/bernacode" aria-label="Github"><i class="fab fa-github fs-5 hover-accent"></i></a>
+                <a href="https://linkedin.com/in/bernacode" aria-label="LinkedIn"><i class="fab fa-linkedin fs-5 hover-accent"></i></a>
+                <a href="https://twitter.com/bernacode" aria-label="Twitter"><i class="fab fa-twitter fs-5 hover-accent"></i></a>
+              </div>
+            </div>
+    
+            <!-- Column 2: Quick Links -->
+            <div class="col-6 col-md-2">
+              <h5><i class="fas fa-compass me-2"></i><span data-lang-content="es">Explorar</span><span data-lang-content="en">Explore</span></h5>
+              <ul class="list-unstyled">
+                <li><a href="index.html"><span data-lang-content="es">Inicio</span><span data-lang-content="en">Home</span></a></li>
+                <li><a href="projects.html"><span data-lang-content="es">Proyectos</span><span data-lang-content="en">Projects</span></a></li>
+                <li><a href="stack.html">Stack</a></li>
+                <li><a href="about.html"><span data-lang-content="es">Sobre mí</span><span data-lang-content="en">About Me</span></a></li>
+              </ul>
+            </div>
+    
+            <!-- Column 3: SEO / Stack -->
+            <div class="col-12 col-md-3">
+              <h5><i class="fas fa-layer-group me-2"></i>Stack</h5>
+              <div class="footer-seo-tags">
+                <span>Python</span>
+                <span>Java</span>
+                <span>Django</span>
+                <span>PostgreSQL</span>
+                <span>NumPy & Pandas</span>
+                <span>Matplotlib & Seaborn</span>
+                <span>SciPy</span>
+                <span>Data Science</span>
+                <span>Docker</span>
+                <span>Git / GitHub</span>
+                <span>Linux / Shell</span>
+              </div>
+            </div>
+    
+            <!-- Column 4: Contact -->
+            <div class="col-6 col-md-3">
+              <h5><i class="fas fa-envelope me-2"></i><span data-lang-content="es">Contacto</span><span data-lang-content="en">Contact</span></h5>
+              <ul class="list-unstyled">
+                <li><a href="mailto:contact@bernacode.com">contact@bernacode.com</a></li>
+                <li>Venezuela, Carabobo, Valencia</li>
+              </ul>
+            </div>
+    
+          </div>
+    
+          <!-- Bottom -->
+          <div class="footer-bottom text-center">
+            <p class="mb-0">
+              © 2026 BernaCode. 
+              <span data-lang-content="es">Siempre aprendiendo, siempre creando.</span>
+              <span data-lang-content="en">Always learning, always creating.</span>
+              <br class="d-md-none">
+              <span class="mx-2 d-none d-md-inline">|</span>
+              <a href="privacy.html" class="text-muted text-decoration-none small">
+                <span data-lang-content="es">Política de Privacidad</span>
+                <span data-lang-content="en">Privacy Policy</span>
+              </a>
+            </p>
+          </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
