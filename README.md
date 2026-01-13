@@ -25,46 +25,6 @@
 
 ---
 
-## 🛠️ Stack Tecnológico / Tech Stack
-
-### 💻 Backend & Core
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
-
-### 📊 Data & Analysis
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![Data Science](https://img.shields.io/badge/Data%20Science-F7931E?style=for-the-badge&logo=jupyter&logoColor=white)
-
-### 🔧 Infra & Tools
-![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
-
-### 🎨 Frontend (Portfolio Legacy)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-
----
-
-## 📂 Proyectos Destacados / Featured Projects
-
-### 🏫 TheTeachersHouse
-> **Fullstack Management Platform**
-
-**ES:** Gestión administrativa desarrollada para optimizar el emprendimiento educativo familiar en Venezuela. Control de asistencia y finanzas.
-<br>
-**EN:** Administrative management platform for a family educational venture in Venezuela. Attendance and financial control.
-
-*   🛠 **Tech:** Python, Django, PostgreSQL
-
----
-
 <div align="center">
   <small>© 2026 BernaCode</small>
 </div>
