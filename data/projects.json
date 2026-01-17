@@ -1,0 +1,24 @@
+[
+  {
+    "title": "TheTeachersHouse",
+    "desc_es": "Plataforma que centralizó toda la operación de una academia: inscripciones, pagos y nómina. Demostración de cómo digitalizar flujos manuales complejos.",
+    "desc_en": "Platform that centralized an academy's entire operation: enrollment, payments, and payroll. A demonstration of digitizing complex manual workflows.",
+    "tags": ["Python", "Django", "PostgreSQL", "Bootstrap"],
+    "links": {
+      "docs": "blog.html",
+      "article": "blog.html"
+    },
+    "image": "https://placehold.co/600x400/1a1a1a/00df81?text=TheTeachersHouse"
+  },
+  {
+    "title": "MonokumAI",
+    "desc_es": "Sistema de gestión que integra IA para dirigir la experiencia del usuario. Potencia la operación manual con interacciones inteligentes y personalizadas.",
+    "desc_en": "Management system that integrates AI to direct user experience. Empowers manual operation with intelligent and personalized interactions.",
+    "tags": ["Python", "Discord.py", "OpenAI API", "AsyncIO"],
+    "links": {
+      "docs": "blog.html",
+      "article": "blog.html"
+    },
+    "image": "https://placehold.co/600x400/1a1a1a/00df81?text=MonokumAI"
+  }
+]

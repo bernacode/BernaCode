@@ -221,13 +221,173 @@ function changePage(delta) {
   renderPagination();
 }
 
-// Initialize application logic when the DOM is fully loaded.
+/**
+ * Initializes the hero background cursor tracking animation.
+ */
+function initHeroAnimation() {
+  const heroSection = document.querySelector('.hero-tech-bg');
+  if (!heroSection) return;
+
+  heroSection.addEventListener('mousemove', (e) => {
+    const rect = heroSection.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    heroSection.style.setProperty('--x', `${x}px`);
+    heroSection.style.setProperty('--y', `${y}px`);
+  });
+}
+
 // Initialize application logic when the DOM is fully loaded.
 document.addEventListener('componentsLoaded', () => {
   initLanguageToggle();
   initSidebar();
+  initNavbarScroll();
+  initActiveNavLinks();
+  initHeroAnimation();
+  loadProjects(); // Load and init carousel
 });
 
+/**
+ * Loads projects from JSON and renders them as a grid.
+ */
+function loadProjects() {
+  const container = document.getElementById('projects-container');
+  if (!container) return;
+
+  fetch('data/projects.json')
+    .then(response => response.json())
+    .then(data => {
+      container.innerHTML = ''; // Clear loading spinner
+      
+      data.forEach((project, index) => {
+        // Create Column
+        const col = document.createElement('div');
+        col.className = 'col'; // Row-cols handles the sizing
+
+        // Render Card
+        col.innerHTML = createProjectCard(project, index);
+        container.appendChild(col);
+      });
+      
+      // No initCarousel needed
+    })
+    .catch(error => {
+      console.error('Error loading projects:', error);
+      container.innerHTML = '<div class="col-12"><p class="text-center text-danger">Error loading projects.</p></div>';
+    });
+}
+
+/**
+ * Generates the HTML for a single project card (Grid Style).
+ * @param {Object} project 
+ * @param {number} index
+ * @returns {string} HTML string
+ */
+function createProjectCard(project, index) {
+  // Generate tags HTML
+  const tagsHTML = project.tags.map(tag => 
+    `<span class="badge-dynamic small">${tag}</span>`
+  ).join('');
+
+  // No manual language check needed, CSS handles [data-lang-content] visibility
+  
+  return `
+    <div class="project-grid-card h-100">
+      <!-- Image Header -->
+      <div class="card-img-wrapper">
+        <img src="${project.image}" alt="${project.title}" loading="lazy">
+      </div>
+
+      <!-- Card Body -->
+      <div class="card-body p-4 d-flex flex-column">
+        <div class="d-flex justify-content-between align-items-start mb-3">
+          <h3 class="h4 fw-bold mb-0 text-white">${project.title}</h3>
+          <a href="${project.links.docs || '#'}" class="text-white opacity-50 hover-accent" title="Technical Documentation">
+            <i class="fas fa-file-code fa-lg"></i>
+          </a>
+        </div>
+
+        <p class="text-muted flex-grow-1 mb-4">
+          <span data-lang-content="es">${project.desc_es}</span>
+          <span data-lang-content="en">${project.desc_en}</span>
+        </p>
+
+        <div class="d-flex flex-wrap gap-2 mb-4">
+          ${tagsHTML}
+        </div>
+
+        <div class="mt-auto">
+          <a href="${project.links.article}" class="btn btn-contrast w-100 fw-bold transition-all">
+            <span data-lang-content="es">Ver Detalles</span>
+            <span data-lang-content="en">See Details</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+// Previously used formatting and carousel logic is removed.
+// formatCode() function is no longer needed.
+// initCarousel() function is no longer needed.
+
+
 document.addEventListener('DOMContentLoaded', () => {
-    loadBlogPosts();
+  initLanguageToggle();
+  initSidebar();
+  initNavbarScroll();
+  initActiveNavLinks();
+  initHeroAnimation();
+  loadProjects(); // Ensure this is called
 });
+
+/**
+ * Adds scroll effect to navbar - changes style when scrolled
+ */
+function initNavbarScroll() {
+  const navbar = document.querySelector('.navbar');
+  if (!navbar) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+}
+
+/**
+ * Highlights active nav link based on current scroll position
+ */
+function initActiveNavLinks() {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  function updateActiveLink() {
+    let currentSection = '';
+    
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      const scrollPosition = window.scrollY + 100; // Offset for navbar
+      
+      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        currentSection = section.getAttribute('id');
+      }
+    });
+    
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      const href = link.getAttribute('href');
+      if (href === `#${currentSection}`) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveLink);
+  // Set initial state
+  updateActiveLink();
+}

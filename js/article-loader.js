@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Assuming main.js emits a custom event or we assume reload. 
   // For now, let's just make sure loadArticle is capable.
   
-  // We can hook into the language toggle button if we can find it, 
+  // We can hook into the language toggle button if we can find it, https://gemini.google.com/app/74e371e4d9386b13?hl=es
   // but main.js seems to handle it. 
   // Best approach: If main.js triggers a page reload or text update, we are good.
   // If we want dynamic md reloading:
@@ -191,6 +191,9 @@ function loadArticleHistory(currentSlug) {
   fetch('articles/manifest.json')
     .then(res => res.json())
     .then(posts => {
+      // Sort posts by date descending (newest first)
+      posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
       // Initialize pagination state
       let currentPage = 1;
       const totalPages = Math.ceil(posts.length / ITEMS_PER_PAGE);

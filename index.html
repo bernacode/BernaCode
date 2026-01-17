@@ -1,24 +1,4 @@
-<!--
-  FILE: index.html
-  VERSION: 1.0.0
-  DESCRIPTION:
-    Landing page for BernaCode portfolio. Structure follows a semantic HTML5 layout
-    enhanced with Bootstrap 5 utilities and custom CSS.
 
-  STRUCTURE:
-    - <head>: Meta tags, CDNs (Bootstrap, FontAwesome, Google Fonts), and local CSS.
-    - <body>:
-      1. <nav>: Sticky navigation bar with language toggle logic.
-      2. <main>: Hero section containing profile image, bio, and social links.
-      3. <aside>: "Tech Blog" sidebar, hidden by default, toggled via JS.
-      4. <footer>: Copyright and simplified credits.
-      5. <script>: Bootstrap bundle and local main.js.
-
-  STYLE GUIDELINES (Google Style):
-    - Indentation: 2 spaces.
-    - Attributes: Ordered by namespace (id, class, name, data, src, href...).
-    - Lowercase tags and attributes.
--->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -34,117 +14,523 @@
 <body class="d-flex flex-column min-vh-100">
 
   <!-- NAVBAR -->
-  <!-- NAVBAR -->
   <div id="navbar-placeholder"></div>
 
-  <!-- MAIN HERO SECTION -->
-  <main class="flex-grow-1 d-flex align-items-center justify-content-center py-5">
+  <!-- HERO SECTION -->
+  <section id="inicio" class="hero-tech-bg d-flex align-items-center justify-content-center py-5" style="min-height: 85vh;">
+    <div class="tech-pulse-container pulse-top">
+      <div class="tech-pulse-line"></div>
+    </div>
+    <div class="tech-pulse-container pulse-bottom">
+      <div class="tech-pulse-line"></div>
+    </div>
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-12 col-md-8 col-lg-8 text-center">
-          
-          <div class="mb-4 d-inline-block">
-            <img src="https://avatars.githubusercontent.com/u/197780656?v=4" 
-                 class="rounded-circle profile-pic shadow" 
-                 alt="Christian Deliso BernaCode">
-          </div>
+        <div class="col-12 col-md-10 col-lg-8 text-center">
 
-          <h1 class="display-5 fw-bold mb-1">Christian Deliso</h1>
-          <h2 class="h4 mb-0"><span class="highlight">"BernaCode"</span></h2>
+          <h1 class="display-5 fw-bold mb-1">BernaCode</h1>
+          <h2 class="h4 mb-2">
+            <span class="highlight">
+              <span data-lang-content="es">Startup Venezolana de Ingeniería de Software</span>
+              <span data-lang-content="en">Venezuelan Software Engineering Startup</span>
+            </span>
+          </h2>
           
           <p class="professional-title">
-            <span data-lang-content="es">Ingeniero & Desarrollador</span>
-            <span data-lang-content="en">Engineer & Developer</span>
+            <span data-lang-content="es">Desde Venezuela para el Mundo</span>
+            <span data-lang-content="en">From Venezuela to the World</span>
           </p>
           
-          <div class="section-divider"></div>
+          <div class="section-divider my-4"></div>
 
           <p class="lead fs-5 mb-4 mx-auto" style="max-width: 700px;">
             <span data-lang-content="es">
-              <strong>Ingeniero y Desarrollador</strong> apasionado por la evolución técnica. Me especializo en adoptar y dominar nuevas herramientas para afrontar desafíos desde cualquier ángulo tecnológico. Bajo el lema <span class="highlight">"siempre aprendiendo, siempre creando"</span>.
+              Creamos soluciones digitales de alto impacto para negocios locales y globales. Desarrollo a medida, infraestructura robusta y excelencia operativa.
             </span>
             <span data-lang-content="en">
-              <strong>Engineer & Developer</strong> passionate about technical evolution. I specialize in adopting and mastering new tools to tackle challenges from any technological angle. Driven by the motto <span class="highlight">"always learning, always creating"</span>.
+              We create high-impact digital solutions for local and global businesses. Custom development, robust infrastructure, and operational excellence.
             </span>
           </p>
 
-          <div class="working-at mb-5">
+          <div class="d-flex justify-content-center gap-3 mt-4">
+            <a class="btn btn-contrast px-4 py-3" href="#contacto">
+              <span data-lang-content="es">Hablemos</span><span data-lang-content="en">Let's Talk</span>
+            </a>
+            <a class="btn btn-outline-contrast px-4 py-3" href="#portfolio">
+              <span data-lang-content="es">Ver Casos de Éxito</span><span data-lang-content="en">View Success Cases</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS SECTION (ALT BG) -->
+  <section id="servicios" class="py-5 section-alt">
+    <div class="container">
+      <header class="text-center mb-5">
+        <h2 class="display-4 fw-bold text-uppercase">
+          <span data-lang-content="es">Soluciones</span>
+          <span data-lang-content="en">Solutions</span>
+        </h2>
+        <div class="section-divider mx-auto" style="max-width: 200px;"></div>
+        <p class="text-muted text-uppercase ls-2">
+          <span data-lang-content="es">Excelencia Operacional y Escalabilidad</span>
+          <span data-lang-content="en">Operational Excellence & Scalability</span>
+        </p>
+      </header>
+
+      <div class="row g-4 mb-5 justify-content-center">
+        
+        <!-- Service 1 -->
+        <div class="col-md-6 col-lg-6">
+          <div class="project-card h-100 bg-transparent border-0">
+            <div class="text-center mb-3">
+              <i class="fas fa-layer-group fs-1 highlight"></i>
+            </div>
+            <h3 class="h5 fw-bold mb-3 text-center text-uppercase">
+              <span data-lang-content="es">Sistemas de Gestión Empresarial</span>
+              <span data-lang-content="en">Custom Enterprise Software</span>
+            </h3>
+            <p class="small">
+              <span data-lang-content="es">
+                Software hecho a la medida de su empresa. Organice toda su información en un solo lugar y tome decisiones con claridad.
+              </span>
+              <span data-lang-content="en">
+                Software tailored to your company. Organize all your information in one place and make decisions with clarity.
+              </span>
+            </p>
+            <div class="mt-3 d-flex flex-wrap gap-2 justify-content-center">
+              <span class="badge-dynamic">Django</span>
+              <span class="badge-dynamic">Docker</span>
+              <span class="badge-dynamic">API REST</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="col-md-6 col-lg-6">
+          <div class="project-card h-100 bg-transparent border-0">
+            <div class="text-center mb-3">
+              <i class="fas fa-boxes fs-1 highlight"></i>
+            </div>
+            <h3 class="h5 fw-bold mb-3 text-center text-uppercase">
+              <span data-lang-content="es">Logística Inteligente</span>
+              <span data-lang-content="en">Smart Logistics Systems</span>
+            </h3>
+            <p class="small">
+              <span data-lang-content="es">
+                Optimice sus rutas e inventarios. Reduzca costos operativos y haga que su negocio funcione como un reloj.
+              </span>
+              <span data-lang-content="en">
+                Optimize your routes and inventory. Reduce operational costs and make your business run like clockwork.
+              </span>
+            </p>
+            <div class="mt-3 d-flex flex-wrap gap-2 justify-content-center">
+              <span class="badge-dynamic">Optimization</span>
+              <span class="badge-dynamic">Algorithms</span>
+              <span class="badge-dynamic">Real-time</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="col-md-6 col-lg-6">
+          <div class="project-card h-100 bg-transparent border-0">
+            <div class="text-center mb-3">
+              <i class="fas fa-coins fs-1 highlight"></i>
+            </div>
+            <h3 class="h5 fw-bold mb-3 text-center text-uppercase">
+              <span data-lang-content="es">Motores Financieros Automatizados</span>
+              <span data-lang-content="en">Automated Financial Engines</span>
+            </h3>
+            <p class="small">
+              <span data-lang-content="es">
+                Olvídese del caos administrativo. Automatizamos su facturación y cobranza para que sepa exactamente cuánto gana en tiempo real.
+              </span>
+              <span data-lang-content="en">
+                Forget administrative chaos. We automate your billing and collection so you know exactly how much you earn in real-time.
+              </span>
+            </p>
+            <div class="mt-3 d-flex flex-wrap gap-2 justify-content-center">
+              <span class="badge-dynamic">Fintech</span>
+              <span class="badge-dynamic">Stripe/PayPal</span>
+              <span class="badge-dynamic">Automation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="col-md-6 col-lg-6">
+          <div class="project-card h-100 bg-transparent border-0">
+            <div class="text-center mb-3">
+              <i class="fas fa-infinity fs-1 highlight"></i>
+            </div>
+            <h3 class="h5 fw-bold mb-3 text-center text-uppercase">
+              <span data-lang-content="es">Continuidad Operativa</span>
+              <span data-lang-content="en">Operational Continuity</span>
+            </h3>
+            <p class="small">
+              <span data-lang-content="es">
+                Nos encargamos de que su plataforma nunca falle. Seguridad, actualizaciones y soporte continuo para que solo se preocupe por crecer.
+              </span>
+              <span data-lang-content="en">
+                We ensure your platform never fails. Security, updates, and continuous support so you only worry about growing.
+              </span>
+            </p>
+            <div class="mt-3 d-flex flex-wrap gap-2 justify-content-center">
+              <span class="badge-dynamic">DevOps</span>
+              <span class="badge-dynamic">Cloud</span>
+              <span class="badge-dynamic">24/7 Support</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 text-center">
+          <a class="btn btn-outline-dark px-5 py-3 rounded-pill fw-bold" href="blog.html">
+            <span data-lang-content="es">Saber Más</span>
+            <span data-lang-content="en">Learn More</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO SECTION (DARK BG) -->
+  <section id="portfolio" class="hero-tech-bg py-5 position-relative" style="min-height: 85vh;">
+    <div class="tech-pulse-container pulse-top">
+      <div class="tech-pulse-line"></div>
+    </div>
+    <div class="tech-pulse-container pulse-bottom">
+      <div class="tech-pulse-line"></div>
+    </div>
+    <div class="container position-relative z-2">
+      <header class="text-center mb-5">
+        <h2 class="display-4 fw-bold text-uppercase text-white">
+          <span data-lang-content="es">Portafolio</span>
+          <span data-lang-content="en">Portfolio</span>
+        </h2>
+        <div class="section-divider mx-auto" style="max-width: 200px;"></div>
+        <p class="text-light opacity-75 text-uppercase ls-2">
+          <span data-lang-content="es">Casos de éxito y proyectos destacados</span>
+          <span data-lang-content="en">Success cases and featured projects</span>
+        </p>
+      </header>
+
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-11 col-lg-10">
+          <!-- Projects Grid -->
+          <div id="projects-container" class="row row-cols-1 row-cols-lg-2 g-4">
+            <!-- Projects will be injected here by JS -->
+            <div class="col-12 text-center py-5">
+              <div class="spinner-border text-success" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS SECTION (ALT BG) -->
+  <section id="nosotros" class="py-5 section-alt">
+    <div class="container">
+      <header class="text-center mb-5">
+        <h2 class="display-4 fw-bold text-uppercase">
+          <span data-lang-content="es">Sobre BernaCode</span>
+          <span data-lang-content="en">About BernaCode</span>
+        </h2>
+        <div class="section-divider mx-auto" style="max-width: 200px;"></div>
+      </header>
+
+      <div class="row g-4 mb-5">
+        <div class="col-lg-6">
+          <div class="project-card h-100">
+            <h3 class="fw-bold mb-3 text-uppercase small">
+              <span data-lang-content="es">Quiénes Somos</span>
+              <span data-lang-content="en">Who We Are</span>
+            </h3>
+            <p>
+              <span data-lang-content="es">
+                Somos una <span class="highlight">startup venezolana de desarrollo de software</span> con una fuerte inclinación hacia
+                el entendimiento profundo de los sistemas. Buscamos comprender cómo funcionan internamente y cómo pueden resolver problemas reales de negocio.
+              </span>
+              <span data-lang-content="en">
+                We are a <span class="highlight">Venezuelan software development startup</span> with a strong inclination toward
+                deep system understanding. We aim to understand how they work internally and how they can solve real business problems.
+              </span>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="project-card h-100">
+            <h3 class="fw-bold mb-3 text-uppercase small">
+              <span data-lang-content="es">Cómo Trabajamos</span>
+              <span data-lang-content="en">How We Work</span>
+            </h3>
+            <ul class="stack-list">
+              <li>
+                <i class="fas fa-diagram-project"></i>
+                <span data-lang-content="es">Analizamos el problema antes de escribir código</span>
+                <span data-lang-content="en">We analyze the problem before writing code</span>
+              </li>
+              <li>
+                <i class="fas fa-layer-group"></i>
+                <span data-lang-content="es">Dividimos sistemas complejos en componentes simples</span>
+                <span data-lang-content="en">We break complex systems into simple components</span>
+              </li>
+              <li>
+                <i class="fas fa-shield-alt"></i>
+                <span data-lang-content="es">Consideramos seguridad desde el diseño</span>
+                <span data-lang-content="en">We consider security from the design stage</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech Stack -->
+      <div class="row">
+        <div class="col-12">
+          <h3 class="h4 fw-bold mb-4 text-center text-uppercase">
+            <span data-lang-content="es">Nuestro Stack Tecnológico</span>
+            <span data-lang-content="en">Our Tech Stack</span>
+          </h3>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="stack-card text-center h-100">
+            <h4 class="h6 fw-bold mb-3 highlight text-uppercase">Backend & Logic</h4>
+            <p class="small mb-0">Python • Django • Java</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stack-card text-center h-100">
+            <h4 class="h6 fw-bold mb-3 highlight text-uppercase">Data & Analysis</h4>
+            <p class="small mb-0">PostgreSQL • NumPy • Pandas</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stack-card text-center h-100">
+            <h4 class="h6 fw-bold mb-3 highlight text-uppercase">Infra & Tools</h4>
+            <p class="small mb-0">Docker • Git • Linux</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO SECTION (GREEN BG) -->
+  <section id="contacto" class="py-5" style="background-color: var(--accent-color);">
+    <div class="container py-4">
+      
+      <!-- Header -->
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-10 text-center">
+          <h2 class="display-4 fw-bold text-dark mb-3">
+            <span data-lang-content="es">¿Listo para Empezar?</span>
+            <span data-lang-content="en">Ready to Start?</span>
+          </h2>
+          <p class="lead text-dark opacity-75">
             <span data-lang-content="es">
-              Actualmente, desarrollando una plataforma integral de gestión académica y financiera.
+              Cuéntanos sobre tu proyecto y te responderemos en menos de 24 horas.
             </span>
             <span data-lang-content="en">
-              Currently, developing a comprehensive academic and financial management platform.
+              Tell us about your project and we'll respond within 24 hours.
             </span>
-          </div>
-
-          <div class="d-flex justify-content-center gap-3">
-            <a class="btn btn-contrast px-4 py-3" href="projects.html">
-              <span data-lang-content="es">Ver Proyectos</span><span data-lang-content="en">View Projects</span>
-              <i class="fas fa-arrow-right ms-2"></i>
-            </a>
-            <a class="btn btn-outline-contrast px-4 py-3" href="contact.html">
-              <i class="fas fa-envelope me-2"></i>
-              <span data-lang-content="es">Contactar</span><span data-lang-content="en">Contact Me</span>
-            </a>
-          </div>
-
-          <div class="mt-5 d-flex justify-content-center gap-4">
-            <a class="text-inherit fs-4 hover-accent" href="https://github.com/bernacode"><i class="fab fa-github"></i></a>
-            <a class="text-inherit fs-4 hover-accent" href="https://linkedin.com/in/bernacode"><i class="fab fa-linkedin"></i></a>
-            <a class="text-inherit fs-4 hover-accent" href="https://twitter.com/bernacode"><i class="fab fa-twitter"></i></a>
-          </div>
-
+          </p>
         </div>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="row g-4 align-items-start">
+        
+        <!-- Left Column: Contact Info -->
+        <div class="col-lg-5">
+          <div class="card border-0 bg-dark bg-opacity-75 text-white h-100">
+            <div class="card-body p-4 p-md-5">
+              <h3 class="h4 fw-bold mb-4">
+                <span data-lang-content="es">Información de Contacto</span>
+                <span data-lang-content="en">Contact Information</span>
+              </h3>
+              
+              <div class="d-flex flex-column gap-4">
+                <!-- Email -->
+                <div class="d-flex align-items-start">
+                  <div class="me-3">
+                    <div class="bg-white bg-opacity-10 rounded-circle p-3" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                      <i class="fas fa-envelope fs-5 text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h5 class="fw-bold mb-1 text-white">Email</h5>
+                    <a href="mailto:ceo@bernacode.com" class="text-white text-decoration-none opacity-75">ceo@bernacode.com</a>
+                  </div>
+                </div>
+
+                <!-- Location -->
+                <div class="d-flex align-items-start">
+                  <div class="me-3">
+                    <div class="bg-white bg-opacity-10 rounded-circle p-3" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                      <i class="fas fa-map-marker-alt fs-5 text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h5 class="fw-bold mb-1 text-white">
+                      <span data-lang-content="es">Ubicación</span>
+                      <span data-lang-content="en">Location</span>
+                    </h5>
+                    <p class="mb-0 text-white">Valencia, Carabobo, Venezuela</p>
+                    <small class="text-white opacity-75">
+                      <span data-lang-content="es">Trabajo remoto disponible</span>
+                      <span data-lang-content="en">Remote work available</span>
+                    </small>
+                  </div>
+                </div>
+
+                <!-- Response Time -->
+                <div class="d-flex align-items-start">
+                  <div class="me-3">
+                    <div class="bg-white bg-opacity-10 rounded-circle p-3" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                      <i class="fas fa-clock fs-5 text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h5 class="fw-bold mb-1 text-white">
+                      <span data-lang-content="es">Tiempo de Respuesta</span>
+                      <span data-lang-content="en">Response Time</span>
+                    </h5>
+                    <p class="mb-0 text-white">
+                      <span data-lang-content="es">Menos de 24 horas</span>
+                      <span data-lang-content="en">Less than 24 hours</span>
+                    </p>
+                    <small class="text-white opacity-75">
+                      <span data-lang-content="es">Lunes a Viernes, 9AM - 6PM (VET)</span>
+                      <span data-lang-content="en">Monday to Friday, 9AM - 6PM (VET)</span>
+                    </small>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Social Links -->
+              <div class="mt-5">
+                <h5 class="fw-bold mb-3 text-white">
+                  <span data-lang-content="es">Síguenos</span>
+                  <span data-lang-content="en">Follow Us</span>
+                </h5>
+                <div class="d-flex gap-3">
+                  <a href="https://github.com/bernacode" class="btn btn-light btn-sm rounded-circle" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                    <i class="fab fa-github text-dark"></i>
+                  </a>
+                  <a href="https://linkedin.com/in/christiandeliso" class="btn btn-light btn-sm rounded-circle" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                    <i class="fab fa-linkedin-in text-dark"></i>
+                  </a>
+                  <a href="https://twitter.com/bernacode" class="btn btn-light btn-sm rounded-circle" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                    <i class="fab fa-twitter text-dark"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Form -->
+        <div class="col-lg-7">
+          <div class="card border-0 shadow-lg">
+            <div class="card-body p-4 p-md-5">
+              <h4 class="fw-bold mb-4 text-dark">
+                <span data-lang-content="es">Envíanos un Mensaje</span>
+                <span data-lang-content="en">Send us a Message</span>
+              </h4>
+              
+              <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="row g-3">
+                  
+                  <div class="col-md-6">
+                    <label for="contact-name" class="form-label fw-bold small text-dark">
+                      <i class="fas fa-user me-2 text-dark"></i>
+                      <span data-lang-content="es">Nombre</span>
+                      <span data-lang-content="en">Name</span>
+                    </label>
+                    <input type="text" class="form-control form-control-lg" id="contact-name" name="name" required>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="contact-email" class="form-label fw-bold small text-dark">
+                      <i class="fas fa-envelope me-2 text-dark"></i>
+                      Email
+                    </label>
+                    <input type="email" class="form-control form-control-lg" id="contact-email" name="email" required>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="contact-subject" class="form-label fw-bold small text-dark">
+                      <i class="fas fa-layer-group me-2 text-dark"></i>
+                      <span data-lang-content="es">Servicio de Interés</span>
+                      <span data-lang-content="en">Service of Interest</span>
+                    </label>
+                    <select class="form-select form-select-lg" id="contact-subject" name="subject" required>
+                      <option value="" selected disabled>
+                        <span data-lang-content="es">Selecciona una solución /</span><span data-lang-content="en">Select a solution</span>
+                      </option>
+                      <option value="custom-software">
+                        Software a Medida / Custom Software
+                      </option>
+                      <option value="smart-logistics">
+                        Logística Inteligente / Smart Logistics
+                      </option>
+                      <option value="financial-engines">
+                        Motores Financieros / Financial Engines
+                      </option>
+                      <option value="operational-continuity">
+                        Continuidad Operativa / Operational Continuity
+                      </option>
+                      <option value="other">
+                        Otro / Other
+                      </option>
+                    </select>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="contact-message" class="form-label fw-bold small text-dark">
+                      <i class="fas fa-comment-dots me-2 text-dark"></i>
+                      <span data-lang-content="es">Mensaje</span>
+                      <span data-lang-content="en">Message</span>
+                    </label>
+                    <textarea class="form-control form-control-lg" id="contact-message" name="message" rows="4" required></textarea>
+                  </div>
+
+                  <div class="col-12 mt-4">
+                    <button type="submit" class="btn btn-dark btn-lg w-100 py-3 fw-bold">
+                      <i class="fas fa-paper-plane me-2"></i>
+                      <span data-lang-content="es">Enviar Mensaje</span>
+                      <span data-lang-content="en">Send Message</span>
+                    </button>
+                  </div>
+
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-  </main>
+  </section>
 
-  <!-- TOGGLE BUTTON -->
-  <button id="blog-toggle-left" class="tech-toggle-left">
-    <i class="fas fa-arrow-right"></i>
-  </button>
-
-  <!-- ASIDE BLOG -->
-  <aside id="tech-blog-left">
-
-    <div class="tech-header d-flex flex-column gap-3">
-      <div class="d-flex justify-content-between align-items-center w-100">
-        <h4 class="text-uppercase fw-bold small mb-0"><span data-lang-content="es">Blog Tecnico</span><span data-lang-content="en">Tech Blog</span></h4>
-        <button id="blog-close-left" class="tech-close">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      
-      <!-- Search & Filter Controls -->
-      <div class="w-100">
-        <div class="input-group mb-2">
-          <span class="input-group-text bg-transparent border-secondary text-muted"><i class="fas fa-search"></i></span>
-          <input type="text" id="tech-search" class="form-control bg-transparent border-secondary text-light small" placeholder="Search..." style="font-size: 0.9rem;">
-        </div>
-        <div id="tech-filter-tags" class="d-flex flex-wrap gap-2">
-          <!-- Tags will be injected here -->
-        </div>
-      </div>
-    </div>
-
-    <div class="tech-content d-flex flex-column h-100">
-      <div id="blog-posts-container" class="flex-grow-1">
-        <!-- Posts will be loaded here dynamically -->
-        <div class="text-center mt-4">
-          <div class="spinner-border spinner-border-sm text-muted" role="status"></div>
-        </div>
-      </div>
-      
-      <!-- Pagination -->
-      <div id="tech-pagination" class="mt-auto pt-3 border-top border-secondary d-flex justify-content-between align-items-center">
-        <!-- Pagination controls injected here -->
-      </div>
-    </div>
-  </aside>
-
-  <!-- EXPANDED FOOTER -->
-  <!-- EXPANDED FOOTER -->
-  <div id="footer-placeholder"></div>
+  <footer>
+    <div id="footer-placeholder"></div>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/components.js"></script>

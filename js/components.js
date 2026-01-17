@@ -32,9 +32,7 @@ async function loadComponent(elementId, filePath) {
     }
 }
 
-/**
- * Highlights the current page in the navbar
- */
+
 function initActiveLink() {
     const currentPath = window.location.pathname.split("/").pop() || "index.html";
     const navLinks = document.querySelectorAll(".nav-link");

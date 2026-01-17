@@ -1,0 +1,59 @@
+{
+  "categories": [
+    {
+      "id": "company",
+      "title": "Empresa",
+      "title_en": "Company",
+      "icon": "fas fa-building",
+      "articles": [
+        {
+          "id": "about",
+          "title": "Sobre BernaCode",
+          "title_en": "About BernaCode",
+          "date": "Jan 2026",
+          "file": "posts/about.md",
+          "file_en": "posts/about_en.md"
+        },
+        {
+          "id": "culture",
+          "title": "Nuestra Cultura",
+          "title_en": "Our Culture",
+          "date": "Jan 2026",
+          "file": "posts/culture.md",
+          "file_en": "posts/culture_en.md"
+        }
+      ]
+    },
+    {
+      "id": "case-studies",
+      "title": "Casos de Estudio",
+      "title_en": "Case Studies",
+      "icon": "fas fa-flask",
+      "articles": [
+        {
+          "type": "folder",
+          "title": "TheTeachersHouse",
+          "title_en": "TheTeachersHouse",
+          "icon": "fas fa-graduation-cap",
+          "articles": []
+        }
+      ]
+    },
+    {
+      "id": "legal",
+      "title": "Legal & Privacidad",
+      "title_en": "Legal & Privacy",
+      "icon": "fas fa-scale-balanced",
+      "articles": [
+        {
+          "id": "privacy",
+          "title": "Política de Privacidad",
+          "title_en": "Privacy Policy",
+          "date": "Jan 2026",
+          "file": "posts/privacy.md",
+          "file_en": "posts/privacy_en.md"
+        }
+      ]
+    }
+  ]
+}

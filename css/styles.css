@@ -22,23 +22,127 @@
    1. VARIABLES
    ====================================================== */
 :root {
-  /* Default Theme (Dark) */
-  --bg-color: #212529;
-  --text-main: #f8f9fa;
-  --text-muted: #adb5bd;
-  --border-color: #495057;
-  --btn-bg: #f8f9fa;
-  --btn-text: #212529;
-  --accent-color: #20c997;
-  --code-bg: #ffffff0d;
+  /* =========================================
+     Color Palette (Axiforma / BernaCode)
+     ========================================= */
+  
+  /* Primary Colors */
+  --color-rich-black:       #000F01;
+  --color-dark-green:       #032221;
+  --color-bangladesh:       #03624C;
+  --color-mountain:         #2CC295;
+  --color-caribbean:        #00DF81; /* Main Accent */
+  --color-white-flash:      #F1F7F6;
+
+  /* Secondary Colors */
+  --color-pine:             #06302B;
+  --color-basil:            #0B453A;
+  --color-forest:           #095544;
+  --color-frog:             #17876D;
+  --color-mint:             #2FA98C;
+  --color-stone:            #707D7D;
+  --color-pistachio:        #AACBC4;
+
+  /* Semantic Mapping */
+  --bg-color:       var(--color-rich-black);
+  --text-main:      var(--color-white-flash);
+  --text-muted:     var(--color-pistachio);    /* Good contrast on rich black */
+  --border-color:   var(--color-basil);        /* Subtle green borders */
+  --btn-bg:         var(--color-white-flash);
+  --btn-text:       var(--color-rich-black);
+  --accent-color:   var(--color-caribbean);
+  --code-bg:        rgba(3, 34, 33, 0.5);      /* Dark Green with opacity */
 }
 
 
 
 
 /* ======================================================
+   HERO TECH BACKGROUND
+   ====================================================== */
+.hero-tech-bg {
+  background-color: var(--color-rich-black);
+  background-image: 
+    radial-gradient(
+      circle at var(--x, 50%) var(--y, 50%), 
+      rgba(0, 223, 129, 0.15) 0%, 
+      transparent 40%
+    ),
+    linear-gradient(rgba(11, 69, 58, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11, 69, 58, 0.1) 1px, transparent 1px);
+  background-size: 100% 100%, 40px 40px, 40px 40px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.1s ease; /* Smooth transition */
+}
+
+/* Pulse / EKG Animation */
+.tech-pulse-container {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+.pulse-top {
+  top: 0%; /* Aligned to top */
+}
+
+.pulse-bottom {
+  top: 85%; /* Aligned to bottom */
+}
+
+/* Optional: offset animation for top line */
+.pulse-top .tech-pulse-line {
+  animation-delay: 2s;
+}
+
+.tech-pulse-line {
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 150' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,75 L450,75 L460,45 L470,105 L480,75 L1200,75' fill='none' stroke='%2300DF81' stroke-width='2' stroke-opacity='0.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 1200px 100%;
+  background-position: -1200px center;
+  animation: pulse-move 4s linear infinite;
+  filter: drop-shadow(0 0 4px var(--color-caribbean));
+}
+
+@keyframes pulse-move {
+  0% { background-position: -1200px center; opacity: 0; }
+  20% { opacity: 1; }  /* Slower fade in */
+  80% { opacity: 1; }
+  100% { background-position: 100% center; opacity: 0; } /* Slower fade out */
+}
+
+.hero-tech-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, transparent 0%, var(--color-rich-black) 90%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-tech-bg > .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* ======================================================
    2. BASE
    ====================================================== */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   background-color: var(--bg-color);
@@ -58,12 +162,74 @@ a {
 }
 
 /* ======================================================
+   ALTERNATING SECTIONS (Light/Dark Pattern)
+   ====================================================== */
+.section-alt {
+  background-color: var(--color-white-flash);
+  color: var(--color-rich-black);
+  border-top: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.section-alt .text-muted {
+  color: var(--color-stone) !important;
+}
+
+.section-alt h2,
+.section-alt h3,
+.section-alt h4,
+.section-alt h5 {
+  color: var(--color-rich-black) !important;
+}
+
+/* Cards inside light sections */
+.section-alt .project-card,
+.section-alt .stack-card {
+  background-color: #ffffff;
+  border-color: rgba(0,0,0,0.08);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+
+.section-alt .project-card:hover,
+.section-alt .stack-card:hover {
+  border-color: var(--accent-color);
+  box-shadow: 0 8px 24px rgba(0, 223, 129, 0.15);
+  transform: translateY(-4px);
+}
+
+.section-alt .badge-dynamic {
+  background-color: rgba(0, 223, 129, 0.08);
+  border-color: rgba(0, 223, 129, 0.2);
+}
+
+/* ======================================================
    3. NAVBAR
    ====================================================== */
 .navbar {
   background-color: var(--bg-color) !important;
   border-bottom: 1px solid var(--border-color) !important;
   z-index: 1030;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+/* Add padding to body to compensate for fixed navbar */
+body {
+  padding-top: 70px;
+}
+
+/* Smooth scroll with offset for fixed navbar */
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 80px;
 }
 
 .navbar-brand,
@@ -73,6 +239,25 @@ a {
 
 .nav-link:hover {
   color: var(--accent-color) !important;
+}
+
+/* Active nav link (current section) */
+.nav-link.active {
+  color: var(--accent-color) !important;
+  font-weight: 700;
+  position: relative;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
 }
 
 /* ======================================================
@@ -120,7 +305,7 @@ a {
   background-color: var(--accent-color);
   color: var(--btn-text);
   transform: none;
-  box-shadow: 0 0 20px rgba(32, 201, 151, 0.8);
+  box-shadow: 0 0 20px rgba(0, 223, 129, 0.8);
   filter: brightness(1.1);
 }
 
@@ -162,11 +347,13 @@ a {
    7. COMPONENTS
    ====================================================== */
 .badge-dynamic {
-  background-color: rgba(32, 201, 151, 0.1);
+  display: inline-block; /* Fixes overlap issue */
+  background-color: rgba(0, 223, 129, 0.1);
   color: var(--accent-color);
-  border: 1px solid rgba(32, 201, 151, 0.3);
+  border: 1px solid rgba(0, 223, 129, 0.3);
   border-radius: 20px;
   padding: 6px 15px;
+  font-size: 0.8rem;
 }
 
 .highlight {
@@ -195,9 +382,53 @@ a {
 .project-card:hover {
   border-color: var(--accent-color);
   transform: translateY(-8px) scale(1.01);
-  background: rgba(32, 201, 151, 0.05);
-  box-shadow: 0 10px 30px rgba(32, 201, 151, 0.15);
+  background: rgba(0, 223, 129, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 223, 129, 0.15);
 }
+
+/* Tech Window Styling */
+.code-window {
+  background: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  font-family: 'Fira Code', 'Consolas', monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.window-header {
+  background: #2d2d2d;
+  padding: 8px 12px;
+  display: flex;
+  gap: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot.red { background: #ff5f56; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #27c93f; }
+
+.window-body {
+  padding: 15px;
+  color: #d4d4d4;
+}
+
+/* Syntax Highlighting (Simple) */
+.kw { color: #569cd6; } /* Keyword */
+.str { color: #ce9178; } /* String */
+.cls { color: #4ec9b0; } /* Class */
+.func { color: #dcdcaa; } /* Function */
+.num { color: #b5cea8; } /* Number */
+.comment { color: #6a9955; } /* Comment */
 
 .border-dashed {
   border: 2px dashed var(--border-color) !important;
@@ -217,6 +448,76 @@ a {
 .stack-card:hover {
   border-color: var(--accent-color);
 }
+
+/* ======================================================
+   PORTFOLIO GRID
+   ====================================================== */
+.project-grid-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-grid-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: var(--accent-color);
+}
+
+.card-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 220px; /* Fixed height for consistency */
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-grid-card:hover .card-img-wrapper img {
+  transform: scale(1.05);
+}
+
+
+.hover-bg-accent:hover {
+  background-color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+}
+
+.hover-text-dark:hover {
+  color: var(--color-rich-black) !important;
+}
+
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+/* Position them further out */
+.carousel-nav.prev { left: -80px; }
+.carousel-nav.next { right: -80px; }
+
+/* Responsive Nav: Bring them closer on smaller screens */
+@media (max-width: 1200px) {
+  .carousel-nav.prev { left: -40px; }
+  .carousel-nav.next { right: -40px; }
+}
+
+@media (max-width: 768px) {
+  /* On mobile, maybe put them at the bottom or very close */
+  .carousel-nav.prev { left: -10px; width: 40px; height: 40px; }
+  .carousel-nav.next { right: -10px; width: 40px; height: 40px; }
+}
+
 
 /* ======================================================
    9. LANGUAGES (IDIOMAS)
@@ -315,7 +616,7 @@ html[lang="en"] [data-lang-content="en"] {
 }
 
 .tech-toggle-left:hover {
-  background: rgba(32, 201, 151, 0.15);
+  background: rgba(0, 223, 129, 0.15);
 }
 
 .tech-toggle-left i {
@@ -343,7 +644,7 @@ html[lang="en"] [data-lang-content="en"] {
 .tech-card:hover {
   border-color: var(--accent-color);
   transform: translateX(6px);
-  background: rgba(32, 201, 151, 0.05); /* Slightly clearer background on hover */
+  background: rgba(0, 223, 129, 0.05); /* Slightly clearer background on hover */
 }
 
 /* ======================================================
@@ -417,8 +718,8 @@ html[lang="en"] [data-lang-content="en"] {
    Let's stick to a dark editor look for code blocks always for that "pro" feel, 
    or responsive. Let's start with responsive but high contrast. */
 [data-bs-theme="light"] .article-body pre {
-   background: #f8f9fa;
-   color: #212529;
+   background: var(--color-white-flash);
+   color: var(--color-rich-black);
    border: 1px solid #dee2e6;
 }
 
@@ -574,7 +875,7 @@ html[lang="en"] [data-lang-content="en"] {
   font-size: 0.65rem;
   padding: 3px 10px;
   border-radius: 20px;
-  border: 1px solid rgba(32, 201, 151, 0.4);
+  border: 1px solid rgba(0, 223, 129, 0.4);
   color: var(--accent-color);
 }
 
@@ -639,7 +940,7 @@ html[lang="en"] [data-lang-content="en"] {
 .footer-seo-tags span {
   font-size: 0.8rem;
   color: var(--text-muted);
-  background: var(--code-bg);
+  background: rgba(255, 255, 255, 0.05);
   padding: 2px 8px;
   border-radius: 4px;
 }
@@ -657,5 +958,122 @@ html[lang="en"] [data-lang-content="en"] {
 }
 
 .hover-accent:hover {
+  color: var(--accent-color) !important;
+}
+
+/* ======================================================
+   CONTACT FORM (Green Section)
+   ====================================================== */
+#contacto .form-control,
+#contacto .form-select {
+  background-color: var(--color-white-flash) !important;
+  border: 2px solid #e9ecef !important;
+  color: var(--color-rich-black) !important;
+}
+
+#contacto .form-control:focus,
+#contacto .form-select:focus {
+  background-color: #ffffff !important;
+  border-color: var(--accent-color) !important;
+  box-shadow: 0 0 0 0.2rem rgba(0, 223, 129, 0.25) !important;
+}
+
+#contacto .btn-dark {
+  background-color: var(--color-rich-black);
+  border-color: var(--color-rich-black);
+  transition: all 0.3s ease;
+}
+
+#contacto .btn-dark:hover {
+  background-color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+footer.main-footer {
+  margin-top: 0rem !important;
+  border-top: 5px solid white;
+}
+
+/* ======================================================
+   13. DOCS / BLOG MODULE
+   ====================================================== */
+.bg-darker {
+  background-color: #0b0c0c; /* Deep black/gray */
+}
+
+.module-link {
+  transition: all 0.2s ease;
+  border-left: 2px solid transparent;
+}
+
+.module-link:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding-left: 1.25rem !important; /* Slight nudge */
+}
+
+.active-module-link {
+  background-color: rgba(0, 223, 129, 0.1);
+  border-left: 2px solid var(--accent-color);
+  padding-left: 1.25rem !important;
+}
+
+/* Custom Scrollbar for Content Area */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Markdown Content Styling Override for Module */
+#module-content h1, 
+#module-content h2, 
+#module-content h3 {
+  color: var(--color-white-flash);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+#module-content p {
+  color: #adb5bd; /* Bootstrap text-muted-ish */
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+#module-content a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+#module-content ul, 
+#module-content ol {
+  color: #adb5bd;
+  margin-bottom: 1.5rem;
+}
+
+#module-content code {
+  color: var(--accent-color);
+}
+
+#module-content pre {
+  background-color: rgba(0,0,0,0.3);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Utility for accent color text */
+.text-accent {
   color: var(--accent-color) !important;
 }
